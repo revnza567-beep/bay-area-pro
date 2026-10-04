@@ -1,0 +1,396 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bay Mobile Pro | Mobile Tire Service</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f5c400;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f5c400;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 8%;
+      background:
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.85)),
+        url("https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1800&q=80")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 7vw, 80px);
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #f5c400;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #ddd;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .primary {
+      background: #f5c400;
+      color: #000;
+    }
+
+    .secondary {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #aaa;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid #292929;
+      padding: 30px;
+      border-radius: 12px;
+      transition: .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #f5c400;
+    }
+
+    .card .icon {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #aaa;
+    }
+
+    .why {
+      background: #111;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      text-align: center;
+    }
+
+    .why-item {
+      padding: 25px;
+    }
+
+    .why-item h3 {
+      color: #f5c400;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: #151515;
+      padding: 45px;
+      border-radius: 15px;
+      border: 1px solid #292929;
+    }
+
+    .contact-box h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: #aaa;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background: #050505;
+      padding: 25px 8%;
+      text-align: center;
+      color: #777;
+      border-top: 1px solid #222;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 14px;
+      }
+
+      section {
+        padding: 60px 5%;
+      }
+
+      .hero {
+        padding: 60px 5%;
+      }
+
+      .contact-box {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">BAY MOBILE PRO</div>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+    <div class="hero-content">
+
+      <h1>
+        Tires Done <span>Where You Are.</span>
+      </h1>
+
+      <p>
+        Fast, convenient mobile tire service brought directly to your
+        driveway, workplace, or roadside.
+      </p>
+
+      <div class="buttons">
+        <a href="tel:+15105555555" class="btn primary">
+          Call Now
+        </a>
+
+        <a href="#services" class="btn secondary">
+          View Services
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="services">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Professional tire service without the shop wait.</p>
+    </div>
+
+    <div class="services">
+
+      <div class="card">
+        <div class="icon">🛞</div>
+        <h3>Tire Installation</h3>
+        <p>
+          Have your new tires installed wherever your vehicle is located.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔧</div>
+        <h3>Flat Tire Service</h3>
+        <p>
+          Get help when you have a flat tire and need to get back on the road.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚗</div>
+        <h3>Mobile Tire Replacement</h3>
+        <p>
+          Convenient tire replacement brought directly to you.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚙️</div>
+        <h3>Tire Rotation</h3>
+        <p>
+          Keep your tires wearing evenly with professional rotation service.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="why" id="about">
+
+    <div class="section-title">
+      <h2>Why Bay Mobile Pro?</h2>
+      <p>We bring the tire service to you.</p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-item">
+        <h3>Mobile</h3>
+        <p>
+          No need to drive to a tire shop. We come to you.
+        </p>
+      </div>
+
+      <div class="why-item">
+        <h3>Convenient</h3>
+        <p>
+          Service at home, work, or when you're stuck on the road.
+        </p>
+      </div>
+
+      <div class="why-item">
+        <h3>Professional</h3>
+        <p>
+          Reliable tire service designed to get you moving again.
+        </p>
+      </div>
+
+      <div class="why-item">
+        <h3>Fast</h3>
+        <p>
+          Quick service so you can spend less time waiting.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="contact" id="contact">
+
+    <div class="contact-box">
+
+      <h2>Need Tire Service?</h2>
+
+      <p>
+        Give Bay Mobile Pro a call and we'll come to you.
+      </p>
+
+      <a href="tel:+15105555555" class="btn primary">
+        📞 Call Bay Mobile Pro
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    © 2026 Bay Mobile Pro — Mobile Tire Service
+  </footer>
+
+</body>
+</html>
+```
+
+**Important:** I used a placeholder phone number (`510-555-5555`) so you can replace it with the real/demo number later.
